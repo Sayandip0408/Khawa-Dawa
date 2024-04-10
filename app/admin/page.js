@@ -30,7 +30,7 @@ const Admin = () => {
     const fetchMenu = async () => {
         setIsLoading(true)
         try {
-            const res = await fetch('/api/menu', {
+            const res = await fetch(process.env.NEXT_PUBLIC_MENU_ADMIN, {
                 headers: {
                     method: 'GET',
                     Accept: 'application/json'
@@ -58,7 +58,7 @@ const Admin = () => {
     const addMenu = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const res = await fetch('/api/menu', {
+        const res = await fetch(process.env.NEXT_PUBLIC_MENU_ADMIN, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -105,7 +105,7 @@ const Admin = () => {
     }
 
     const deleteItem = async (_id) => {
-        const res = await fetch('/api/menu', {
+        const res = await fetch(process.env.NEXT_PUBLIC_MENU_ADMIN, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -147,7 +147,7 @@ const Admin = () => {
 
     const getOrders = async () => {
         try {
-            const res = await fetch('/api/orders', {
+            const res = await fetch(process.env.NEXT_PUBLIC_ORDER_ADMIN, {
                 headers: {
                     Accept: 'application/json',
                     method: 'GET'

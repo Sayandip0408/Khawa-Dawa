@@ -4,8 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Loader from '@/components/Loader';
 import { useAuth } from '@/utils/auth';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image'
-import heroImg from '../../../public/heroBg.png';
 import Link from 'next/link';
 
 const Register = () => {
@@ -40,7 +38,7 @@ const Register = () => {
 
     setIsLoading(true)
 
-    const response = await fetch('/api/register', {
+    const response = await fetch(process.env.NEXT_PUBLIC_REGISTER, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

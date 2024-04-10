@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
 
         phone = digits;
 
-        const response = await fetch('/api/login', {
+        const response = await fetch(process.env.NEXT_PUBLIC_LOGIN, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -89,24 +89,3 @@ export const AuthProvider = ({ children }) => {
         </AuthContext.Provider>
     );
 };
-
-
-
-
-
-
-// const router = useRouter();
-    // const [user, setUser] = useState(() => {
-    //     if (typeof window !== 'undefined') {
-    //         const storedUser = localStorage.getItem('user');
-    //         return storedUser ? JSON.parse(storedUser) : null;
-    //     }
-    //     return null;
-    // });
-    // const [isLoading, setIsLoading] = useState(false);
-
-    // useEffect(() => {
-    //     if (typeof window !== 'undefined') {
-    //         localStorage.setItem('user', JSON.stringify(user));
-    //     }
-    // }, [user]);

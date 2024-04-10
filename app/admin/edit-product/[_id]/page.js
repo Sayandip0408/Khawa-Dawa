@@ -19,7 +19,7 @@ const EditProduct = ({ params }) => {
     const { _id } = params;
 
     const fetchItem = async () => {
-        const res = await fetch(`/api/menu/${_id}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_MENU_ADMIN}'/'${_id}`);
         if (!res.ok) {
             toast.error('Some error occurred!', {
                 position: "top-left",
@@ -45,7 +45,7 @@ const EditProduct = ({ params }) => {
 
     const editData = async (e) => {
         e.preventDefault();
-        const res = await fetch('http://localhost:3000/api/menu', {
+        const res = await fetch(process.env.NEXT_PUBLIC_MENU_ADMIN, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

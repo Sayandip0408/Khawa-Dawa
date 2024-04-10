@@ -35,8 +35,3 @@ export default function Home() {
     </main>
   );
 }
-
-
-
-
-// {isClient && (user === null ? <button onClick={() => router.push('/authentication/login')}>Login</button> : <button onClick={logout}>Logout</button>)}
