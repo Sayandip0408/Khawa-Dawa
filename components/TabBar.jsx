@@ -13,7 +13,7 @@ const TabBar = ({ tabs }) => {
     };
 
     const addToCart = async (item, index) => {
-        const res = await fetch(process.env.NEXT_PUBLIC_ADD_TO_CART_URL, {
+        const res = await fetch('/api/cart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

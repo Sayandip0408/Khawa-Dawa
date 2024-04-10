@@ -45,7 +45,7 @@ const EditProduct = ({ params }) => {
 
     const editData = async (e) => {
         e.preventDefault();
-        const res = await fetch(process.env.NEXT_PUBLIC_MENU_ADMIN, {
+        const res = await fetch('/api/menu', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

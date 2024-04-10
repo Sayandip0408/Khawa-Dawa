@@ -38,7 +38,7 @@ const Register = () => {
 
     setIsLoading(true)
 
-    const response = await fetch(process.env.NEXT_PUBLIC_REGISTER, {
+    const response = await fetch('/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

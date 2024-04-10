@@ -26,7 +26,7 @@ const CheckOut = () => {
 
 
     const clearCart = async () => {
-        const res = await fetch(process.env.NEXT_PUBLIC_DELETE_CART_ITEM, {
+        const res = await fetch('/api/cart', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ const CheckOut = () => {
 
     const fetchCartItems = async () => {
         setIsLoading(true);
-        const res = await fetch(process.env.NEXT_PUBLIC_GET_USER_CART_URL + '/' + user._id, {
+        const res = await fetch('/api/cart/' + user._id, {
             headers: {
                 method: 'GET',
                 Accept: 'application/json'
@@ -117,7 +117,7 @@ const CheckOut = () => {
     }
 
     const removeItem = async (item) => {
-        const res = await fetch(process.env.NEXT_PUBLIC_DELETE_CART_ITEM + '/' + item._id, {
+        const res = await fetch('/api/cart/' + item._id, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

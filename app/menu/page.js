@@ -18,7 +18,7 @@ const Menu = () => {
     const fetchMenu = async () => {
         setIsLoading(true)
         try {
-            const res = await fetch(process.env.NEXT_PUBLIC_MENU, {
+            const res = await fetch('/api/menu', {
                 headers: {
                     method: 'GET',
                     Accept: 'application/json'

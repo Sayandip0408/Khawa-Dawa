@@ -14,7 +14,7 @@ const Orders = () => {
 
   const fetchOrders = async () => {
     setIsLoading(true);
-    const res = await fetch(process.env.NEXT_PUBLIC_GET_USER_ORDER_URL + '/' + user._id, {
+    const res = await fetch('/api/orders/' + user._id, {
       headers: {
         method: 'GET',
         Accept: 'application/json'

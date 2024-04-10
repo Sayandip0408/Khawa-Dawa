@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
 
         phone = digits;
 
-        const response = await fetch(process.env.NEXT_PUBLIC_LOGIN, {
+        const response = await fetch('/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
