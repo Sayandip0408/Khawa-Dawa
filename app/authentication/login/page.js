@@ -23,7 +23,7 @@ const Login = () => {
         if (user) {
             router.push('/')
         }
-    }, [user, isLoading])
+    }, [user, isLoading, router])
 
 
     return isLoading ? <Loader /> : (
@@ -38,7 +38,7 @@ const Login = () => {
                         <input type='text' placeholder='+91 000 0000 000' value={phone} onChange={(e) => setPhone(e.target.value)} className='w-full lg:w-[400px] h-10 rounded-lg focus:outline-none border-red-200 focus:border-red-700 border px-2' />
                         <input type='password' placeholder='********' value={password} onChange={(e) => setPassword(e.target.value)} className='w-full lg:w-[400px] h-10 rounded-lg focus:outline-none border-red-200 focus:border-red-700 border px-2' />
                         <button type='submit' className='w-full lg:w-[400px] h-10 rounded-lg bg-red-600 text-white font-semibold hover:bg-red-700'>Login</button>
-                        <p className='text-center'>Don't have an account? <Link href='/authentication/register' className='font-semibold text-red-600'>Register</Link></p>
+                        <p className='text-center'>Don&apos;t have an account? <Link href='/authentication/register' className='font-semibold text-red-600'>Register</Link></p>
                     </form>
                 </div>
             </div>

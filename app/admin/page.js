@@ -173,7 +173,7 @@ const Admin = () => {
             getOrders();
             fetchMenu();
         }
-    }, [user, setIsLoading])
+    }, [user, setIsLoading, fetchMenu, router])
 
     return !isLoading ? (
         <main className="bg-transparent h-[calc(100vh-64px)] overflow-y-scroll p-2">
