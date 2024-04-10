@@ -19,7 +19,7 @@ const EditProduct = ({ params }) => {
     const { _id } = params;
 
     const fetchItem = async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_MENU_ADMIN}'/'${_id}`);
+        const res = await fetch(process.env.NEXT_PUBLIC_MENU_ADMIN + '/' + _id);
         if (!res.ok) {
             toast.error('Some error occurred!', {
                 position: "top-left",

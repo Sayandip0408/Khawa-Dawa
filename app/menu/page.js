@@ -69,7 +69,7 @@ const Menu = () => {
 
     return !isLoading ? (
         <main className="bg-transparent h-[calc(100vh-64px)] overflow-y-scroll p-2">
-            <h1 className='text-center text-2xl font-bold text-red-700 font-Pacifico'>Khawa-Dawa's Menu</h1>
+            <h1 className='text-center text-2xl font-bold text-red-700 font-Pacifico'>Khawa-Dawa&apos;s Menu</h1>
             <TabBar tabs={tabs} />
             <Footer />
         </main>
