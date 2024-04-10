@@ -15,7 +15,6 @@ const Menu = () => {
     const [mainMenu, setMainMenu] = useState([]);
     const [bevMenu, setBevMenu] = useState([]);
 
-
     const fetchMenu = async () => {
         setIsLoading(true)
         try {

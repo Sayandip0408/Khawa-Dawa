@@ -31,6 +31,7 @@ export default function Home() {
           <Link href='/menu' className="h-12 w-fit px-10 bg-red-500 rounded-full flex items-center justify-center gap-2 uppercase text-white font-bold hover:bg-red-600">Order Now <BiSolidRightArrow /></Link>
         </div>
       </section>
+
       <Footer />
     </main>
   );

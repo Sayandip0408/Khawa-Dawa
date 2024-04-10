@@ -96,7 +96,7 @@ const EditProduct = ({ params }) => {
         else {
             fetchItem();
         }
-    }, [user, fetchItem, router])
+    }, [user])
 
     return (
         <main className="bg-transparent h-[calc(100vh-64px)] overflow-y-scroll p-2">

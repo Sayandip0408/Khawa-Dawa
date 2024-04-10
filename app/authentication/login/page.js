@@ -23,7 +23,7 @@ const Login = () => {
         if (user) {
             router.push('/')
         }
-    }, [user, isLoading, router])
+    }, [user, isLoading])
 
 
     return isLoading ? <Loader /> : (
